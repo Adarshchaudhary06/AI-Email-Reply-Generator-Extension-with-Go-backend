@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "AI Email Reply",
+  "version": "1.0",
+  "description": "AI-powered Chrome extension to generate intelligent email replies with Groq API.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://mail.google.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/*"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
